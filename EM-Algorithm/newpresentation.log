@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.2.13)  28 FEB 2019 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.2.13)  28 FEB 2019 18:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1031,7 +1031,7 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-No file newpresentation.aux.
+(./newpresentation.aux)
 \openout1 = `newpresentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -1048,6 +1048,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1125,6 +1126,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 16.
 LaTeX Info: Redefining \pageref on input line 16.
 LaTeX Info: Redefining \nameref on input line 16.
+
+(./newpresentation.out) (./newpresentation.out)
 \@outlinefile=\write5
 \openout5 = `newpresentation.out'.
 
@@ -1197,54 +1200,206 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \includegraphics on input line 16.
 
-No file newpresentation.nav.
+(./newpresentation.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 20.
+(Font)              size <5> substituted on input line 21.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.42 \end{frame}
+                
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-] [3
-
-]
-<fig1.jpg, id=105, 630.85687pt x 599.23875pt>
-File: fig1.jpg Graphic file (type jpg)
- <use fig1.jpg>
-Package pdftex.def Info: fig1.jpg used on input line 83.
-(pdftex.def)             Requested size: 126.16913pt x 119.84563pt.
-
-<fig2.jpg, id=106, 720.44156pt x 592.46344pt>
-File: fig2.jpg Graphic file (type jpg)
- <use fig2.jpg>
-Package pdftex.def Info: fig2.jpg used on input line 83.
-(pdftex.def)             Requested size: 144.08575pt x 118.49059pt.
-
-Overfull \vbox (61.05624pt too high) detected at line 83
- []
-
-[4
-
- <./fig1.jpg> <./fig2.jpg>] <fig3.jpg, id=136, 1305.37688pt x 335.75438pt>
-File: fig3.jpg Graphic file (type jpg)
-
-<use fig3.jpg>
-Package pdftex.def Info: fig3.jpg used on input line 102.
-(pdftex.def)             Requested size: 195.79808pt x 50.36098pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 102.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Try loading font information for U+msa on input line 42.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 102.
+LaTeX Font Info:    Try loading font information for U+msb on input line 42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.42 \end{frame}
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.42 \end{frame}
+                
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.42 \end{frame}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<pic1.png, id=54, 606.265pt x 73.27374pt>
+File: pic1.png Graphic file (type png)
+ <use pic1.png>
+Package pdftex.def Info: pic1.png used on input line 42.
+(pdftex.def)             Requested size: 181.8809pt x 21.98228pt.
+
+
+! LaTeX Error: \begin{beamer@framepauses} on input line 42 ended by \end{figure
+}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{frame}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.42 \end{frame}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{beamer@frameslide} on input line 42 ended by \end{beamer@
+framepauses}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{frame}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.42 \end{frame}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Too many }'s.
+\endbeamer@frameslide ...amer@framepauses}\egroup 
+                                                  \ifx \beamer@frametitle \@...
+l.42 \end{frame}
+                
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Undefined control sequence.
+\endbeamer@frameslide ...box \else \beamer@zoomer 
+                                                  \fi \beamer@undolabels \be...
+l.42 \end{frame}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{beamer@frameslide}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{frame}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.42 \end{frame}
+                
+Things are pretty mixed up, but I think the worst is over.
+
+[2
+
+ <./pic1.png>] <pic3.png, id=88, 587.19376pt x 93.34875pt>
+File: pic3.png Graphic file (type png)
+ <use pic3.png>
+Package pdftex.def Info: pic3.png used on input line 59.
+(pdftex.def)             Requested size: 176.15948pt x 28.00484pt.
+
+[3
+
+ <./pic3.png>] <pic2.png, id=116, 593.21625pt x 113.42375pt>
+File: pic2.png Graphic file (type png)
+ <use pic2.png>
+Package pdftex.def Info: pic2.png used on input line 68.
+(pdftex.def)             Requested size: 177.96625pt x 34.02737pt.
+
+[4
+
+ <./pic2.png>] [5
+
+] [6
+
+] <fig1.jpg, id=196, 630.85687pt x 599.23875pt>
+File: fig1.jpg Graphic file (type jpg)
+
+<use fig1.jpg>
+Package pdftex.def Info: fig1.jpg used on input line 135.
+(pdftex.def)             Requested size: 126.16913pt x 119.84563pt.
+ <fig2.jpg, id=197, 720.44156pt x 592.46344pt>
+File: fig2.jpg Graphic file (type jpg)
+ <use fig2.jpg>
+Package pdftex.def Info: fig2.jpg used on input line 135.
+(pdftex.def)             Requested size: 144.08575pt x 118.49059pt.
+
+Overfull \vbox (61.05624pt too high) detected at line 135
+ []
+
+[7
+
+ <./fig1.jpg> <./fig2.jpg>] <fig3.jpg, id=227, 1305.37688pt x 335.75438pt>
+File: fig3.jpg Graphic file (type jpg)
+
+<use fig3.jpg>
+Package pdftex.def Info: fig3.jpg used on input line 154.
+(pdftex.def)             Requested size: 195.79808pt x 50.36098pt.
+
 ! Misplaced alignment tab character &.
 <argument> ..._{2}, \sigma _{22}) $\linebreak $Y &
                                                   = (1-\Delta )*Y_{1} + \Del...
-l.102 \end{frame}
+l.154 \end{frame}
                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1256,7 +1411,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 <argument> ...elta \in \{0, 1\}$ with $Pr(\Delta &
                                                   = 1) = \pi $\linebreak \li...
-l.102 \end{frame}
+l.154 \end{frame}
                  
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1268,7 +1423,7 @@ might try typing `S' now just to see what is salvageable.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.102 \end{frame}
+l.154 \end{frame}
                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1276,31 +1431,31 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.102 \end{frame}
+l.154 \end{frame}
                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[5
+[8
 
- <./fig3.jpg>] [6
+ <./fig3.jpg>] [9
 
-] <fig10.jpg, id=195, 1168.365pt x 608.2725pt>
+] <fig10.jpg, id=280, 1168.365pt x 608.2725pt>
 File: fig10.jpg Graphic file (type jpg)
 
 <use fig10.jpg>
-Package pdftex.def Info: fig10.jpg used on input line 125.
+Package pdftex.def Info: fig10.jpg used on input line 177.
 (pdftex.def)             Requested size: 368.03693pt x 191.60686pt.
 
-Overfull \hbox (60.74706pt too wide) in paragraph at lines 125--125
+Overfull \hbox (60.74706pt too wide) in paragraph at lines 177--177
  [] 
  []
 
 
-Overfull \vbox (14.9269pt too high) detected at line 125
+Overfull \vbox (14.9269pt too high) detected at line 177
  []
 
-[7
+[10
 
  <./fig10.jpg>]
 \tf@nav=\write6
@@ -1312,34 +1467,25 @@ Overfull \vbox (14.9269pt too high) detected at line 125
 \tf@snm=\write8
 \openout8 = `newpresentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
  (./newpresentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
+Package rerunfilecheck Info: File `newpresentation.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
-
-Package rerunfilecheck Warning: File `newpresentation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `newpresentation.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 16854 strings out of 494910
- 321268 string characters out of 6179836
- 388417 words of memory out of 5000000
- 19728 multiletter control sequences out of 15000+600000
+ 16909 strings out of 494910
+ 321853 string characters out of 6179836
+ 388567 words of memory out of 5000000
+ 19765 multiletter control sequences out of 15000+600000
  10552 words of font info for 39 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  48i,16n,59p,412b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1352,11 +1498,12 @@ t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb>
-Output written on newpresentation.pdf (7 pages, 547584 bytes).
+msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb>
+Output written on newpresentation.pdf (10 pages, 658860 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 17 named destinations out of 1000 (max. 500000)
- 87 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 349 PDF objects out of 1000 (max. 8388607)
+ 304 compressed objects within 4 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

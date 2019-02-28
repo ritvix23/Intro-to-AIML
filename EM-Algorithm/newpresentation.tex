@@ -15,8 +15,56 @@
 \institute{IIT Hyderabad}
 \begin{document}
 
+
 \begin{frame}
 \titlepage{}
+\end{frame}
+
+
+\begin{frame}
+
+
+
+
+\bigskip
+\textsf{Suppose we have some data points x_{1}......x_{n}}
+\begin{figure}
+\includegraphics[scale=.3]{pic1.png}
+\end{figure}
+\textsf{and we also tell you that these points belong to two different probabilistic distributions, say, two gaussians such that we know which point belogs to which particular distribution.}\linebreak\linebreak
+\textbf{Can we find the parameters $\mu_{b}, \sigma^{2}$ for the two gaussians?}\linebreak\linebreak
+
+\textbf{Indeed, we can.}\linebreak\linebreak
+\textsf{$\mu = \sum_{i=1}^{n_{b}}\frac{x_{i}}{n_{b}}$}\linebreak
+\textsf{$\sigma^{2} = \sum_{i=1}^{n_{b}}\frac{(x_{i} - \mu_{b})^{2}}{n_{b}}$\linebreak
+and similarly for the other distribution.}
+
+\end{frame}
+
+
+
+\begin{frame}
+
+
+
+\textsf{Now, suppose data points are there but we don't know the as to which gaussian  a particular point belongs.}
+\begin{figure}
+\includegraphics[scale=.3]{pic3.png}
+\end{figure}
+\textsf{But what we do know is that these come from two gaussians, whose parameters $\mu, \sigma^{2}$ is known}\linebreak\linebreak
+\textbf{Can we, for each point, decide which of the two gaussians it is more likely to belong to?}\linebreak
+\textsf{Yes, this can be done by claculating a posteriori prob.}\linebreak\linebreak
+\textsf{$P(b|x_{i}) =\frac{ P(x_{i}|b)P(b)}{P(x_{i}|b)P(b) + P(x_{i}|a)P(a)}$}\linebreak
+\textsf{where $P(x_{i}|b)$ can be obtained from the gaussian $N(\mu_{b}, \sigma_{b}^{2})$}
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}
+\includegraphics[scale=.3]{pic2.png}
+\end{figure}
+\textbf{But what happens, if we neither knew the source gaussian, nor their parameters?}\linebreak\linebreak
+\textsf{Then we use the EM algorithm method, an iterative method, to find the same.}
 \end{frame}
 
 
@@ -24,7 +72,9 @@
 \textbf{Step-1: Expectation}\linebreak
 \linebreak
 \textsf{Creates a function for the expectation of the log-likelihood evaluated using the
-current estimate for the parameters.}
+current estimate for the parameters.}\linebreak
+$\star$
+\textbf{ Basically we will assume some initial parameters and assign each point with its a- posteriori probability}
 \linebreak
 \linebreak
 \linebreak
@@ -34,7 +84,9 @@ current estimate for the parameters.}
 
 \textsf{Which computes parameters maximizing the expected log-likelihood found on the
 E step. These parameter-estimates are then used to determine the distribution of
-the latent variables in the next E step.}
+the latent variables in the next E step.}\linebreak
+$\star$
+\textbf{ Basically, we will again calculate the parameters for the next E -step }
 
 \end{frame}
 
