@@ -15,12 +15,9 @@
 \institute{IIT Hyderabad}
 \begin{document}
 
-
 \begin{frame}
 \titlepage{}
 \end{frame}
-
-
 \begin{frame}
 
 
@@ -78,7 +75,7 @@ $\star$
 \linebreak
 \linebreak
 \linebreak
-\linebreak\linebreak
+
 \textbf{Step-2: Maximization}
 \linebreak
 
@@ -91,19 +88,8 @@ $\star$
 \end{frame}
 
 
-\begin{frame}
-\textbf{Introduction}
-\linebreak\linebreak
-\textsf{The EM algorithm is used to find (local) maximum likelihood parameters of a
-statistical model in cases where the equations cannot be solved directly. Typically
-these models involve latent variables in addition to unknown parameters and known
-data observations. That is, either missing values exist among the data, or the model
-can be formulated more simply by assuming the existence of further unobserved
-data points. For example, a mixture model can be described more simply by
-assuming that each observed data point has a corresponding unobserved data
-point, or latent variable, specifying the mixture component to which each data point
-belongs.}
-\end{frame}
+
+
 
 
 \begin{frame}
@@ -115,21 +101,17 @@ estimation.}
 
 
 \begin{figure}
-\begin{flushleft}
-\includegraphics[scale=0.2]{fig1.jpg}
+
+\includegraphics[scale=0.17]{fig1.png}
 \label{Histogram of data}
-\end{flushleft}
+\caption{Mixture example. (Left panel:) Histogram of data. (Right panel:)
+Maximum likelihood fit of Gaussian densities (solid red) and responsibility (dotted green) of the left component density for observation y, as a function of y.}
 
 
 
-\begin{flushright}
-\includegraphics[scale=0.2]{fig2.jpg}
-\label{Maximum likelihood fit
-of Gaussian densities (solid red) and
-responsibility (dotte green) of the left
-component density for observation y,
-as a function of y}
-\end{flushright}
+
+
+
 \end{figure}
 
 \end{frame}
@@ -141,8 +123,8 @@ as a function of y}
 \end{figure}
 \textsf{Due to Bimodalty of data Gaussian distribution would be inappropriate. So we
 will model Y as a mixture of two distinct distributions.\linebreak\linebreak
-$Y_{1} \equiv N(\mu_{1},  \sigma_{12}) $\linebreak
-$Y_{2} \equiv N(\mu_{2},  \sigma_{22}) $\linebreak
+$Y_{1} \equiv N(\mu_{1},  \sigma_{1}^2) $\linebreak
+$Y_{2} \equiv N(\mu_{2},  \sigma_{2}^2) $\linebreak
 $Y &= (1-\Delta)*Y_{1} + \Delta * Y_{2} $\linebreak
 where $\Delta \in \{0, 1\}$ with $Pr(\Delta &= 1) = \pi $\linebreak\linebreak
 This generative representation is explicit: generate a $\Delta \in \{0, 1\} $ with
@@ -158,7 +140,7 @@ $gY(y) = (1- \pi)\phi \theta_{1} (y)  + \pi\phi \theta_{2} (y).$}
 \textsf{Now suppose we wish to fit this model to the data in Figure 8.5 by maximum likelihood.The parameters are\linebreak
 $\theta = (\pi, \theta_{1} , \theta_{2}) = (\pi, \mu_{1} , \sigma_{12} , \mu_{2} , \sigma_{22})$\linebreak
 The log-likelihood based on the N training cases is}\linebreak\linebreak
-$l(\theta; Z) = \sum_{i=1}^{N}  log[(1- \pi)\phi \theta_{1} (y_{i}) + \pi\phi \theta_{2} (y_{i} )]$\linebreak\linebreak
+$l(\theta; Z) = \sum_{i=1}^{N}  log[(1- \pi)\phi \theta_{1} (y_{i}) + \\pi\phi \theta_{2} (y_{i} )]$\linebreak\linebreak
 \textsf{Direct maximization of $l(\theta; Z)$ is quite difficult numerically, because of
 the sum of terms inside the logarithm. There is, however, a simpler approach. We consider unobserved latent variables $\theta_{i}$ taking values 0 or 1 as
 in (8.36): if $\Delta_{i} = 1 $then $Y_{1}$ comes from model 2, otherwise it comes from
@@ -172,14 +154,70 @@ $l_{0}(\theta;Z,\Delta) = \sum_{i=1}^{N}[(1-\Delta_{i})log\phi_{\theta_{1}}(y_{i
 \textsf{\linebreak\linebreak
 Now we apply the E-M Algorithm for Two-component Gaussian mixture}
 \begin{figure}
-\includegraphics[scale=.315]{fig10.jpg}
+\includegraphics[scale=.215]{fig10.jpg}
 \end{figure}
 \end{frame}
 
+\begin{frame}{•}
+Note that the actual maximization of the likelihood occurs when we put a
+spike of infinite height at any one data point, that is, $\hat{\mu}_{1} = y_{i}$ for some
+i and $\hat{\sigma}_{1}^2 = 0$. This gives infinite likelihood, but is not a useful solution.
+Hence we are actually looking for a good local maximum of the likelihood,
+one for which $\hat{\sigma}_{1}^2 , \hat{\sigma}_{2}^2 > 0.$ To further complicate matters, there can be
+more than one local maximum having $\hat{\sigma}_{1}^2 , \hat{\sigma}_{2}^2 > 0.$. In our example, we
+ran the EM algorithm with a number of different initial guesses for the
+parameters, all having $\hat{\sigma}_{k}^2 > 0.5$, and chose the run that gave us the highest
+maximized likelihood
+
+\end{frame}
+\begin{frame}
+\begin{figure}
+  
+  \includegraphics[width=200]{fig4.jpg}
+  
+  \caption{Selected iterations for E-M algorithm}
+  \label{fig:boat1}
+\end{figure}
+\textsf{The final maximum likelihood estimates are $\hat{\mu}_{1} = 4.62$                 $\hat{\sigma}_{1}^2 = 0.87$, $\hat{\mu}_{2} = 1.06 $ ,$\hat{\sigma}_{2}^2 = 0.77$, $\hat{\pi}$ = 0.546.}
+\end{frame}
+
+\begin{frame}
+
+\begin{figure}
+  \includegraphics[width=200]{fig5.jpg}
+  
+  \caption{observed data log-likelihood as a function of the iteration number}
+  \label{fig:boat1}
+
+\end{figure}
+
+\end{frame}
+\begin{frame}
+\textsf{EM Algorithm in general}
+\begin{figure}
+  \includegraphics[width=300]{fig11.png}
+  
+ 
+
+\end{figure}
+
+\end{frame}
 
 
+\begin{frame}
+\textsf{References}
+\bigskip
+\linebreak
+\textsf{1) The Elements of Statistical Learning - Trevor Hastie, Robert Tibshirani, Jerome Friedman}
+\medskip
+\linebreak 
 
+\textsf{2) https://en.wikipedia.org/}
+\medskip
+\linebreak 
 
+\textsf{3) Victor Lavrenko - Youtube}
+\end{frame}
 
 
 \end{document}
